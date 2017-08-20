@@ -1,0 +1,103 @@
+<html lang="en">
+
+<head>
+  <title>Interactive Web Forms</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="conversational-form.min.js" crossorigin></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="container__child signup__thumbnail">
+          <div class="thumbnail__logo">
+            <h1 class="logo__text">Nibble Computer Society</h1>
+          </div>
+          <div class="thumbnail__content text-center">
+            <h1 class="heading--primary">Welcome to NCS.</h1>
+            <h2 class="heading--secondary">Register yourself for the OP?</h2>
+          </div>
+          <div class="thumbnail__links">
+            <ul class="list-inline m-b-0 text-center">
+              <li><a href="http://alexdevero.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
+              <li>
+                <a href="https://www.behance.net/alexdevero" target="_blank">
+                  <fa class="fa fa-behance"></fa>
+                </a>
+              </li>
+              <li><a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a></li>
+              <li><a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="signup__overlay"></div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="container__child signup__form">
+          <form action="#" cf-form>
+            <div class="form-group">
+              <label for="name">What's your name?</label>
+              <input required cf-questions="Hi there! What's your name? 😊" type="text" class="form-control" name="name" id="name">
+            </div>
+            <div class="form-group">
+              <label for="admission_no">Email</label>
+              <input required class="form-control" cf-questions="Great to meet you, {previous-answer}! I'm a NCS web form, What is your Admission No. ?|Awesome, {previous-answer}! And What is your Admission No. ?" type="text" name="admission_no" id="admission_no">
+            </div>
+            <div class="form-group">
+              <label for="year">Year</label>
+              <div class="radio">
+              <label>
+                <input class="form-control" cf-questions="From which year you are?" type="radio" name="year" id="year-1" value="1">
+                1 year
+              </label>
+              </div>
+              <div class="radio">
+              <label>
+                <input class="form-control" type="radio" name="year" id="year-2" value="2">
+                2 year
+              </label>
+              </div>
+              <div class="radio">
+              <label>
+                <input class="form-control" type="radio" name="year" id="year-3" value="3">
+                3 year
+              </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input class="form-control" type="radio" name="year" id="year-2" value="4">
+                  4 year
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input required pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="If you want to stay updated, please give me your email." type="email" class="form-control" name="email" id="email">
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile</label>
+              <input required maxlength="10" cf-error="Mobile No. not correct" cf-questions="And your mobile number too 😄." type="tel" class="form-control" name="mobile" id="mobile">
+            </div>
+            <div class="m-t-lg">
+              <ul class="list-inline">
+                <li>
+                  <input class="btn btn--form" type="submit" value="Register" />
+                </li>
+                <li>
+                  <a class="signup__link" href="#">I am already a member</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
