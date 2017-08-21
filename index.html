@@ -5,41 +5,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="conversational-form.min.js" crossorigin></script>
+  <script type="text/javascript" src="index.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- Button -->
+  <div class="button">
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+  </div>
+
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <div class="container__child signup__thumbnail">
-          <div class="thumbnail__logo">
-            <h1 class="logo__text">Nibble Computer Society</h1>
+      <div class="col-md-6 col-sm-12 section1">
+        <div class="row">
+          <div class="col-sm-12 logo">
+            <h1 class="text-center">Nibble Computer Society</h1>
           </div>
-          <div class="thumbnail__content text-center">
+          <div class="col-sm-12 content">
             <h1 class="heading--primary">Welcome to NCS.</h1>
             <h2 class="heading--secondary">Register yourself for the OP?</h2>
           </div>
-          <div class="thumbnail__links">
-            <ul class="list-inline m-b-0 text-center">
-              <li><a href="http://alexdevero.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
+          <div class="col-sm-12 content--lower text-center">
+            <ul>
+              <li><a href="http://alexdevero.com/" target="_blank"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a></li>
               <li>
                 <a href="https://www.behance.net/alexdevero" target="_blank">
-                  <fa class="fa fa-behance"></fa>
+                  <fa class="fa fa-behance fa-2x"></fa>
                 </a>
               </li>
-              <li><a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a></li>
-              <li><a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+              <li><a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
             </ul>
           </div>
         </div>
-        <div class="signup__overlay"></div>
+        <div class="overlay"></div>
       </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="container__child signup__form">
+      <div class="col-md-6 col-sm-12 section2">
+
+        <div class="form" >
           <form action="#" cf-form>
             <div class="form-group">
               <label for="name">What's your name?</label>
@@ -82,15 +94,12 @@
             </div>
             <div class="form-group">
               <label for="mobile">Mobile</label>
-              <input required maxlength="10" cf-error="Mobile No. not correct" cf-questions="And your mobile number too 😄." type="tel" class="form-control" name="mobile" id="mobile">
+              <input required maxlength=10 cf-error="Mobile No. not correct" cf-questions="And your mobile number too 😄." type="tel" class="form-control" name="mobile" id="mobile">
             </div>
             <div class="m-t-lg">
               <ul class="list-inline">
                 <li>
                   <input class="btn btn--form" type="submit" value="Register" />
-                </li>
-                <li>
-                  <a class="signup__link" href="#">I am already a member</a>
                 </li>
               </ul>
             </div>
