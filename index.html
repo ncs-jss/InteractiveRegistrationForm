@@ -9,9 +9,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="conversational-form.min.js" crossorigin></script>
-  <script type="text/javascript" src="index.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="js/conversational-form.min.js" crossorigin></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -51,14 +51,15 @@
       <div class="col-md-6 col-sm-12 section2">
 
         <div class="form" >
-          <form action="#" cf-form>
+          <form action="#" id="form">
             <div class="form-group">
               <label for="name">What's your name?</label>
-              <input required cf-questions="Hi there! What's your name? 😊" type="text" class="form-control" name="name" id="name">
+              <input required cf-questions="Hi there! What's your name? 😊" cf-error="Enter your name" type="text" class="form-control" name="name" id="name">
             </div>
             <div class="form-group">
-              <label for="admission_no">Email</label>
-              <input required class="form-control" cf-questions="Great to meet you, {previous-answer}! I'm a NCS web form, What is your Admission No. ?|Awesome, {previous-answer}! And What is your Admission No. ?" type="text" name="admission_no" id="admission_no">
+              <label for="admission_no">Admission No.</label>
+
+              <input required class="form-control" cf-questions="Great to meet you, {previous-answer}! I'm a NCS web form, What is your Admission No. ?|Awesome, {previous-answer}! And What is your Admission No. ?" type="text" name="admission_no" id="admission_no" cf-error="Enter your admission no">
             </div>
             <div class="form-group">
               <label for="year">Year</label>
@@ -89,18 +90,11 @@
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input required pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="If you want to stay updated, please give me your email." type="email" class="form-control" name="email" id="email">
+              <input required pattern=".+\@.+\..+" cf-error="E-mail is not correct" cf-questions="If you want to stay updated, please give me your email." type="email" class="form-control" name="email" id="email">
             </div>
             <div class="form-group">
               <label for="mobile">Mobile</label>
-              <input required maxlength=10 cf-error="Mobile No. not correct" cf-questions="And your mobile number too 😄." type="tel" class="form-control" name="mobile" id="mobile">
-            </div>
-            <div class="m-t-lg">
-              <ul class="list-inline">
-                <li>
-                  <input class="btn btn--form" type="button" value="Register" />
-                </li>
-              </ul>
+              <input required maxlength=10 cf-error="Mobile No. is not correct" cf-questions="And your mobile number too 😄." type="tel" class="form-control" name="mobile" id="mobile">
             </div>
           </form>
         </div>
